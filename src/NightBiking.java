@@ -17,13 +17,13 @@ public class NightBiking
 
         // Negating an OR statement. A person cannot bike at night if it's true
         // that they do NOT have a headlight OR a bike
-        boolean cannotNightBike;
+        boolean cannotNightBike = !(hasBikelight || hasHeadlight);
 
         // This is an equivalent statement as the Boolean statement
         // above using De Morgan's Laws.
         // If a person either does NOT have a headlight AND does NOT have a bikelight,
         // he or she cannot bike
-        boolean cannotNightBikeDeMorgan;
+        boolean cannotNightBikeDeMorgan = !hasBikelight && !hasHeadlight;
 
         // This checks the Boolean value of cannotNightBike to let the person
         // know if they can bike at night or not.

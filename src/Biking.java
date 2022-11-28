@@ -8,21 +8,23 @@ public class Biking
 
         //Ask the user if they have a bike
         System.out.println("Do you have a bike? Enter true or false.");
+        boolean hasBike = input.nextBoolean();
 
 
         //Ask the user if they have a helmet
         System.out.println("Do you have a helmet? Enter true or false.");
+        boolean hasHelmet = input.nextBoolean();
 
 
         // Negating an AND statement. A person cannot bike if it's true
-        // that they do NOT have a helment AND a bike
-        boolean cannotBike;
+        // that they do NOT have a helmet AND a bike
+        boolean cannotBike = !(hasBike && hasHelmet);
 
         // This is an equivalent statement as the Boolean statement
         // above using De Morgan's Laws.
         // If a person either does NOT have a bike OR does NOT have a helmet,
         // he or she cannot bike
-        boolean cannotBikeDeMorgan;
+        boolean cannotBikeDeMorgan = !hasBike || !hasHelmet;
 
         // This checks the Boolean value of cannotBike to let the person
         // know if they can bike or not.
